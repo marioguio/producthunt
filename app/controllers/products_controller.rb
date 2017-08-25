@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   def index
     @products = Product.all
-  end  
+  end
   def show
     @product = Product.find(params[:id])
   end
@@ -15,9 +15,12 @@ class ProductsController < ApplicationController
     else
       render :new
     end
+    def edit
+      @product = Product.find(params[:id])
+    end
   end
-private
- def product_params
-   params.require(:product).permit(:id, :name, :url, :description)
- end
+  private
+  def product_params
+    params.require(:product).permit(:id, :name, :url, :description)
+  end
 end
