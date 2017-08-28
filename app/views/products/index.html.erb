@@ -14,12 +14,15 @@
           <th>Descripción</th>
         </tr>
         <% @products.each do |product| %>
-          <tr>
-            <td><%= product.id %></td>
-            <td><%= product.name %></td>
-            <td><%= product.url %></td>
-            <td><%= product.description %></td>
-          </tr>
+        <tr>
+          <td><%= product.id %></td>
+          <td><%= link_to product.name, product %></td>
+          <td><%= product.url %></td>
+          <td><%= product.description %></td>
+          <td><%= link_to "<span class='glyphicon glyphicon-pencil'></span>".html_safe, edit_product_path(product) %>
+          <%= link_to "<span class='glyphicon glyphicon-trash'></span>".html_safe, product, method: :delete, data: { confirm: "¿Estás seguro de eliminar este producto?" } %></td>
+        </tr>
+
         <% end %>
       </table>
     </div>
