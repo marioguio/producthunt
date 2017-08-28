@@ -6,3 +6,10 @@
   padding-bottom: 7px;
   img { width: 37px; }
 }
+.back{
+  background-color: grey;
+  border-color: grey;
+  &:hover{
+    border-color: grey;
+  }
+}
