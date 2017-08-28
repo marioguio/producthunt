@@ -7,7 +7,10 @@ Rails.application.routes.draw do
 
   root 'products#index'
   resources :users, only: [:new, :create]
-  resources :products
+
+  resources :products do
+  resources :comments, only: [:create]
+end
  #  For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
  # get '/products/new', to: 'products#new', as: 'new_product'
  # post "products", to: 'products#create'
