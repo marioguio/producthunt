@@ -9,14 +9,16 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'autoprefixer-rails'
 gem 'jquery-ui-rails'
 gem 'jquery-rails'
-gem 'seed_dump'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.3'
 gem 'pg'
 gem 'gravatar-ultimate'
 # Use sqlite3 as the database for Active Record
+gem 'codeship'
 gem 'sqlite3'
+gem 'seed_dump'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
